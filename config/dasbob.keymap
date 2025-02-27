@@ -123,11 +123,6 @@
             layers = <4>;
             require-prior-idle-ms = <1000>;
         };
-
-        g {
-            bindings = <&to 5>;
-            key-positions = <10 19>;
-        };
     };
 
     keymap {
