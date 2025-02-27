@@ -174,14 +174,5 @@
               &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
-
-        layer_5 {
-            bindings = <
-&kp Q  &kp L  &kp Y    &kp P      &kp B     &kp Z    &kp F      &kp O    &kp U      &kp SQT
-&kp C  &kp R  &kp S    &kp T      &kp G     &kp M    &kp N      &kp E    &kp I      &kp A
-&kp W  &kp J  &kp V    &kp D      &kp K     &kp X    &kp H      &kp DOT  &kp COMMA  &kp SEMI
-              &kp ESC  &kp SPACE  &kp BSPC  &kp TAB  &kp SPACE  &kp RET
-            >;
-        };
     };
 };
