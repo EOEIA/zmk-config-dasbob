@@ -114,13 +114,6 @@
             key-positions = <0 9>;
             require-prior-idle-ms = <1500>;
         };
-
-        rcstrcstrcst {
-            bindings = <&to 0>;
-            key-positions = <20 29>;
-            layers = <4>;
-            require-prior-idle-ms = <1000>;
-        };
     };
 
     keymap {
