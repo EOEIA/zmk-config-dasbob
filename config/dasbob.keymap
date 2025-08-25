@@ -1,10 +1,11 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
 #define HOST_OS 1                                     // Linux/NixOS
+
 #include "zmk-helpers/helper.h"                       // defines ZMK_UNICODE_PAIR + digits (N0..N9,A..F)
 #include "zmk-helpers/unicode-chars/german.dtsi"      // &de_ae, &de_oe, &de_ue, &de_sz
 #include "locale_cs.dtsi"                              // Czech pairs above
-
 
 // <- your Czech pairs (the renamed file)
 
@@ -65,7 +66,7 @@
 
         nav {
             bindings = <
-&kp A   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
+&kp B   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
