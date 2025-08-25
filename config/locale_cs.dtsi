@@ -1,23 +1,21 @@
-#include "zmk-helpers/helper.h"
-
- / {
+/ {
   behaviors {
-    // Czech letters — lowercase nibbles (L0..L3) / uppercase nibbles (U0..U3)
-    ZMK_UNICODE_PAIR(cs_a_acute, N0, N0, E, N1,  N0, N0, C, N1) // á Á
-    ZMK_UNICODE_PAIR(cs_e_acute, N0, N0, E, N9,  N0, N0, C, N9) // é É
-    ZMK_UNICODE_PAIR(cs_i_acute, N0, N0, E, D,   N0, N0, C, D ) // í Í
-    ZMK_UNICODE_PAIR(cs_o_acute, N0, N0, F, N3,  N0, N0, D, N3) // ó Ó
-    ZMK_UNICODE_PAIR(cs_u_acute, N0, N0, F, A,   N0, N0, D, A ) // ú Ú
-    ZMK_UNICODE_PAIR(cs_y_acute, N0, N0, F, D,   N0, N0, D, D ) // ý Ý
+    // Czech letters — each pair is: lowercase 4 hex nibbles, uppercase 4 hex nibbles
+    ZMK_UNICODE_PAIR(cs_a_acute, N0, N0, E, N1,  N0, N0, C, N1) // á Á  (00E1 / 00C1)
+    ZMK_UNICODE_PAIR(cs_e_acute, N0, N0, E, N9,  N0, N0, C, N9) // é É  (00E9 / 00C9)
+    ZMK_UNICODE_PAIR(cs_i_acute, N0, N0, E, D,   N0, N0, C, D ) // í Í  (00ED / 00CD)
+    ZMK_UNICODE_PAIR(cs_o_acute, N0, N0, F, N3,  N0, N0, D, N3) // ó Ó  (00F3 / 00D3)
+    ZMK_UNICODE_PAIR(cs_u_acute, N0, N0, F, A,   N0, N0, D, A ) // ú Ú  (00FA / 00DA)
+    ZMK_UNICODE_PAIR(cs_y_acute, N0, N0, F, D,   N0, N0, D, D ) // ý Ý  (00FD / 00DD)
 
-    ZMK_UNICODE_PAIR(cs_c_caron, N0, N1, N0, D,  N0, N1, N0, C) // č Č
-    ZMK_UNICODE_PAIR(cs_d_caron, N0, N1, N0, F,  N0, N1, N0, E) // ď Ď
-    ZMK_UNICODE_PAIR(cs_e_caron, N0, N1, N1, B,  N0, N1, N1, A) // ě Ě
-    ZMK_UNICODE_PAIR(cs_n_caron, N0, N1, N4, N8, N0, N1, N4, N7) // ň Ň
-    ZMK_UNICODE_PAIR(cs_r_caron, N0, N1, N5, N9, N0, N1, N5, N8) // ř Ř
-    ZMK_UNICODE_PAIR(cs_s_caron, N0, N1, N6, N1, N0, N1, N6, N0) // š Š
-    ZMK_UNICODE_PAIR(cs_t_caron, N0, N1, N6, N5, N0, N1, N6, N4) // ť Ť
-    ZMK_UNICODE_PAIR(cs_u_ring,  N0, N1, N6, F,  N0, N1, N6, E ) // ů Ů
-    ZMK_UNICODE_PAIR(cs_z_caron, N0, N1, N7, E,  N0, N1, N7, D) // ž Ž
+    ZMK_UNICODE_PAIR(cs_c_caron, N0, N1, N0, D,  N0, N1, N0, C) // č Č  (010D / 010C)
+    ZMK_UNICODE_PAIR(cs_d_caron, N0, N1, N0, F,  N0, N1, N0, E) // ď Ď  (010F / 010E)
+    ZMK_UNICODE_PAIR(cs_e_caron, N0, N1, N1, B,  N0, N1, N1, A) // ě Ě  (011B / 011A)
+    ZMK_UNICODE_PAIR(cs_n_caron, N0, N1, N4, N8, N0, N1, N4, N7) // ň Ň  (0148 / 0147)
+    ZMK_UNICODE_PAIR(cs_r_caron, N0, N1, N5, N9, N0, N1, N5, N8) // ř Ř  (0159 / 0158)
+    ZMK_UNICODE_PAIR(cs_s_caron, N0, N1, N6, N1, N0, N1, N6, N0) // š Š  (0161 / 0160)
+    ZMK_UNICODE_PAIR(cs_t_caron, N0, N1, N6, N5, N0, N1, N6, N4) // ť Ť  (0165 / 0164)
+    ZMK_UNICODE_PAIR(cs_u_ring,  N0, N1, N6, F,  N0, N1, N6, E ) // ů Ů  (016F / 016E)
+    ZMK_UNICODE_PAIR(cs_z_caron, N0, N1, N7, E,  N0, N1, N7, D) // ž Ž  (017E / 017D)
   };
 };
