@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
 #include "locale_cs.dtsi"
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
@@ -65,7 +64,7 @@
 
         nav {
             bindings = <
-&kp D   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
+&kp B   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
