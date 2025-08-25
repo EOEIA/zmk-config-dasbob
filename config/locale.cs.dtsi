@@ -1,22 +1,20 @@
-// Czech letters — define lowercase/uppercase pairs
-ZMK_UNICODE_PAIR(cs_a_acute, 0x00E1, 0x00C1) // á Á
-ZMK_UNICODE_PAIR(cs_e_acute, 0x00E9, 0x00C9) // é É
-ZMK_UNICODE_PAIR(cs_i_acute, 0x00ED, 0x00CD) // í Í
-ZMK_UNICODE_PAIR(cs_o_acute, 0x00F3, 0x00D3) // ó Ó
-ZMK_UNICODE_PAIR(cs_u_acute, 0x00FA, 0x00DA) // ú Ú
-ZMK_UNICODE_PAIR(cs_y_acute, 0x00FD, 0x00DD) // ý Ý
-ZMK_UNICODE_PAIR(cs_c_caron, 0x010D, 0x010C) // č Č
-ZMK_UNICODE_PAIR(cs_d_caron, 0x010F, 0x010E) // ď Ď
-ZMK_UNICODE_PAIR(cs_e_caron, 0x011B, 0x011A) // ě Ě
-ZMK_UNICODE_PAIR(cs_n_caron, 0x0148, 0x0147) // ň Ň
-ZMK_UNICODE_PAIR(cs_r_caron, 0x0159, 0x0158) // ř Ř
-ZMK_UNICODE_PAIR(cs_s_caron, 0x0161, 0x0160) // š Š
-ZMK_UNICODE_PAIR(cs_t_caron, 0x0165, 0x0164) // ť Ť
-ZMK_UNICODE_PAIR(cs_u_ring,  0x016F, 0x016E) // ů Ů
-ZMK_UNICODE_PAIR(cs_z_caron, 0x017E, 0x017D) // ž Ž
-
-// German (you already get these from german.dtsi too)
-ZMK_UNICODE_PAIR(de_ae, 0x00E4, 0x00C4)      // ä Ä
-ZMK_UNICODE_PAIR(de_oe, 0x00F6, 0x00D6)      // ö Ö
-ZMK_UNICODE_PAIR(de_ue, 0x00FC, 0x00DC)      // ü Ü
-ZMK_UNICODE_PAIR(de_sz, 0x00DF, 0x1E9E)      // ß ẞ
+/ {
+  behaviors {
+    // Czech letters — lowercase/uppercase pairs
+    ZMK_UNICODE_PAIR(cs_a_acute, 0x00E1, 0x00C1) // á Á
+    ZMK_UNICODE_PAIR(cs_e_acute, 0x00E9, 0x00C9) // é É
+    ZMK_UNICODE_PAIR(cs_i_acute, 0x00ED, 0x00CD) // í Í
+    ZMK_UNICODE_PAIR(cs_o_acute, 0x00F3, 0x00D3) // ó Ó
+    ZMK_UNICODE_PAIR(cs_u_acute, 0x00FA, 0x00DA) // ú Ú
+    ZMK_UNICODE_PAIR(cs_y_acute, 0x00FD, 0x00DD) // ý Ý
+    ZMK_UNICODE_PAIR(cs_c_caron, 0x010D, 0x010C) // č Č
+    ZMK_UNICODE_PAIR(cs_d_caron, 0x010F, 0x010E) // ď Ď
+    ZMK_UNICODE_PAIR(cs_e_caron, 0x011B, 0x011A) // ě Ě
+    ZMK_UNICODE_PAIR(cs_n_caron, 0x0148, 0x0147) // ň Ň
+    ZMK_UNICODE_PAIR(cs_r_caron, 0x0159, 0x0158) // ř Ř
+    ZMK_UNICODE_PAIR(cs_s_caron, 0x0161, 0x0160) // š Š
+    ZMK_UNICODE_PAIR(cs_t_caron, 0x0165, 0x0164) // ť Ť
+    ZMK_UNICODE_PAIR(cs_u_ring,  0x016F, 0x016E) // ů Ů
+    ZMK_UNICODE_PAIR(cs_z_caron, 0x017E, 0x017D) // ž Ž
+  };
+};
