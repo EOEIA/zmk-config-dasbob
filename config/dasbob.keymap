@@ -1,6 +1,3 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-
 #define HOST_OS 1                               // Linux/NixOS (IBus Ctrl+Shift+U … Space)
 
 #include "zmk-helpers/helper.h"                 // defines ZMK_UNICODE_* helpers
