@@ -1,6 +1,8 @@
-/ {
+#include "zmk-helpers/helper.h"
+
+ / {
   behaviors {
-    // Czech letters — lowercase (L0..L3) / uppercase (U0..U3)
+    // Czech letters — lowercase nibbles (L0..L3) / uppercase nibbles (U0..U3)
     ZMK_UNICODE_PAIR(cs_a_acute, N0, N0, E, N1,  N0, N0, C, N1) // á Á
     ZMK_UNICODE_PAIR(cs_e_acute, N0, N0, E, N9,  N0, N0, C, N9) // é É
     ZMK_UNICODE_PAIR(cs_i_acute, N0, N0, E, D,   N0, N0, C, D ) // í Í
