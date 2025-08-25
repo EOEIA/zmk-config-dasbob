@@ -46,6 +46,20 @@
 
             label = "NEW_MACRO";
         };
+
+        nshackem: UsCarkou {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp CS_ACUTE>,
+                <&macro_tap>,
+                <&kp CS_N>,
+                <&macro_release>,
+                <&kp CS_ACUTE>;
+
+            label = "USCARKOU";
+        };
     };
 
     keymap {
@@ -82,8 +96,8 @@
 
         nav {
             bindings = <
-&trans          &trans          &trans          &trans        &trans          &trans  &trans    &trans    &trans  &trans
-&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &new_macro    &kp CS_U_ACUTE  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
+&kp CS_C_CARON  &kp CS_E_CARON  &kp CS_Y_ACUTE  &trans        &kp CS_U_ACUTE  &trans  &trans    &trans    &trans  &trans
+&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &new_macro    &kp CS_U_RING   &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans          &trans          &trans          &kp CS_ACUTE  &trans          &trans  &kp HOME  &kp END   &trans  &trans
                                 &trans          &trans        &trans          &trans  &trans    &trans
             >;
