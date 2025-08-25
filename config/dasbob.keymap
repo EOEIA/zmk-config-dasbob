@@ -36,7 +36,13 @@
         dlouhyo: dlouhyo {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp CS_ACUTE>, <&macro_tap>, <&kp CS_O>;
+            bindings =
+                <&macro_press>,
+                <&kp CS_ACUTE>,
+                <&macro_tap>,
+                <&kp CS_O>,
+                <&macro_release>,
+                <&kp CS_ACUTE>;
 
             label = "DLOUHYO";
             wait-ms = <0>;
