@@ -83,19 +83,19 @@
 
         number {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp STAR   &kp N7     &kp N8     &kp N9     &kp COMMA
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp FSLH   &kp N4     &kp N5     &kp N6     &kp N0
-&kp F11  &kp F12  &trans  &trans  &trans   &kp EQUAL  &kp CS_N1  &kp CS_N2  &kp CS_N3  &kp DOT
-                  &trans  &trans  &trans   &trans     &trans     &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5   &kp CS_STAR   &kp CS_N7  &kp CS_N8  &kp CS_N9  &kp CS_COMMA
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10  &kp CS_FSLH   &kp CS_N4  &kp CS_N5  &kp CS_N6  &kp CS_N0
+&kp F11  &kp F12  &trans  &trans  &trans   &kp CS_EQUAL  &kp CS_N1  &kp CS_N2  &kp CS_N3  &kp CS_DOT
+                  &trans  &trans  &trans   &trans        &trans     &trans
             >;
         };
 
         symbol {
             bindings = <
-&kp CS_QMARK       &kp CS_EXCL        &kp CARET              &kp PIPE         &trans       &kp TILDE      &kp DOLLAR     &kp LESS_THAN  &kp GREATER_THAN  &trans
-&kp DOUBLE_QUOTES  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp PERCENT  &kp AT_SIGN    &kp SLASH      &kp ASTERISK   &kp HASH          &kp KP_EQUAL
-&kp SINGLE_QUOTE   &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &trans       &kp AMPERSAND  &kp BACKSLASH  &kp PLUS       &kp MINUS         &trans
-                                      &trans                 &trans           &trans       &trans         &trans         &trans
+&kp CS_QMARK          &kp CS_EXCL           &kp CS_CARET              &kp CS_PIPE         &trans          &kp CS_TILDE      &kp CS_DOLLAR     &kp CS_LESS_THAN  &kp CS_GREATER_THAN  &trans
+&kp CS_DOUBLE_QUOTES  &kp CS_LEFT_BRACKET   &kp CS_LEFT_PARENTHESIS   &kp CS_LEFT_BRACE   &kp CS_PERCENT  &kp CS_AT         &kp CS_SLASH      &kp CS_ASTERISK   &kp CS_HASH          &kp CS_EQUAL
+&kp CS_SINGLE_QUOTE   &kp CS_RIGHT_BRACKET  &kp CS_RIGHT_PARENTHESIS  &kp CS_RIGHT_BRACE  &trans          &kp CS_AMPERSAND  &kp CS_BACKSLASH  &kp CS_PLUS       &kp CS_MINUS         &trans
+                                            &trans                    &trans              &trans          &trans            &trans            &trans
             >;
         };
 
