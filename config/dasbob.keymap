@@ -1,27 +1,10 @@
 #include <dt-bindings/zmk/mouse.h>
 
-
-
-#include <behaviors.dtsi>
-
-
-#include <dt-bindings/zmk/keys.h>
-
-
-
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
-
-
-
 #include <behaviors.dtsi>
-
-
 #include <dt-bindings/zmk/keys.h>
-
-
 
 / {
     behaviors {
@@ -80,7 +63,7 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
+&kp A   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
