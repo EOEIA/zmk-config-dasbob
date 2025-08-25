@@ -25,17 +25,6 @@
             bindings = <&caps_word>;
             key-positions = <31 30>;
         };
-
-        dele_word {
-            bindings = <&word_delete>;
-            key-positions = <31 34>;
-        };
-
-        qwertyLayer {
-            bindings = <&to 0>;
-            key-positions = <0 9>;
-            require-prior-idle-ms = <1500>;
-        };
     };
 
     keymap {
