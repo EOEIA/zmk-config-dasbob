@@ -1,9 +1,13 @@
-#include <behaviors.dtsi>                      // keep native behaviors available
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
 #define HOST_OS 1                               // Linux/NixOS (IBus Ctrl+Shift+U … Space)
+
 #include "zmk-helpers/helper.h"                 // defines ZMK_UNICODE_* helpers
 #include "zmk-helpers/unicode-chars/german.dtsi"// umlauts/ß (&de_ae, &de_oe, &de_ue, &de_sz)
 #include "locale_cs.dtsi"                       // the Czech pairs above
-                      // <- your Czech pairs (the renamed file)
+
+// <- your Czech pairs (the renamed file)
 
 / {
     behaviors {
@@ -62,7 +66,7 @@
 
         nav {
             bindings = <
-&kp D   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
+&kp C   &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
