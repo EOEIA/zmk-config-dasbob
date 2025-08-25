@@ -32,6 +32,22 @@
         };
     };
 
+    macros {
+        dlouhyO: dlouhyO {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp CS_ACUTE>,
+                <&macro_release>,
+                <&macro_press>,
+                <&kp CS_O>,
+                <&macro_release>;
+
+            label = "DLOUHYO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -66,10 +82,10 @@
 
         nav {
             bindings = <
-&trans          &trans          &trans          &trans          &trans          &trans  &trans    &trans    &trans  &trans
-&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &kp CS_U_ACUTE  &kp CS_U_ACUTE  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
-&trans          &trans          &trans          &trans          &trans          &trans  &kp HOME  &kp END   &trans  &trans
-                                &trans          &trans          &trans          &trans  &trans    &trans
+&trans          &trans          &trans          &trans  &trans          &trans  &trans    &trans    &trans  &trans
+&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &trans  &kp CS_U_ACUTE  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
+&trans          &trans          &trans          &trans  &trans          &trans  &kp HOME  &kp END   &trans  &trans
+                                &trans          &trans  &trans          &trans  &trans    &trans
             >;
         };
     };
