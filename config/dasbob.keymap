@@ -3,11 +3,9 @@
 
 #define HOST_OS 1                                     // Linux/NixOS
 
-#include "zmk-helpers/helper.h"                       // defines ZMK_UNICODE_PAIR + digits (N0..N9,A..F)
+#include "zmk-helpers/helper.h"                       // ZMK_UNICODE_* + hex digits (N0..N9,A..F)
 #include "zmk-helpers/unicode-chars/german.dtsi"      // &de_ae, &de_oe, &de_ue, &de_sz
-#include "locale_cs.dtsi"                              // Czech pairs above
-
-// <- your Czech pairs (the renamed file)
+// (No locale_cs.dtsi include; we inline Czech pairs below)
 
 / {
     behaviors {
@@ -21,6 +19,33 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        // --- Czech Unicode pairs (lowercase nibbles, uppercase nibbles) ---
+        // á Á  (00E1 / 00C1)   é É  (00E9 / 00C9)   í Í  (00ED / 00CD)
+        ZMK_UNICODE_PAIR(cs_a_acute, N0, N0, E, N1,  N0, N0, C, N1)
+        ZMK_UNICODE_PAIR(cs_e_acute, N0, N0, E, N9,  N0, N0, C, N9)
+        ZMK_UNICODE_PAIR(cs_i_acute, N0, N0, E, D,   N0, N0, C, D )
+
+        // ó Ó  (00F3 / 00D3)   ú Ú  (00FA / 00DA)   ý Ý  (00FD / 00DD)
+        ZMK_UNICODE_PAIR(cs_o_acute, N0, N0, F, N3,  N0, N0, D, N3)
+        ZMK_UNICODE_PAIR(cs_u_acute, N0, N0, F, A,   N0, N0, D, A )
+        ZMK_UNICODE_PAIR(cs_y_acute, N0, N0, F, D,   N0, N0, D, D )
+
+        // č Č (010D/010C)  ď Ď (010F/010E)  ě Ě (011B/011A)
+        ZMK_UNICODE_PAIR(cs_c_caron, N0, N1, N0, D,  N0, N1, N0, C)
+        ZMK_UNICODE_PAIR(cs_d_caron, N0, N1, N0, F,  N0, N1, N0, E)
+        ZMK_UNICODE_PAIR(cs_e_caron, N0, N1, N1, B,  N0, N1, N1, A)
+
+        // ň Ň (0148/0147)  ř Ř (0159/0158)  š Š (0161/0160)
+        ZMK_UNICODE_PAIR(cs_n_caron, N0, N1, N4, N8, N0, N1, N4, N7)
+        ZMK_UNICODE_PAIR(cs_r_caron, N0, N1, N5, N9, N0, N1, N5, N8)
+        ZMK_UNICODE_PAIR(cs_s_caron, N0, N1, N6, N1, N0, N1, N6, N0)
+
+        // ť Ť (0165/0164)  ů Ů (016F/016E)  ž Ž (017E/017D)
+        ZMK_UNICODE_PAIR(cs_t_caron, N0, N1, N6, N5, N0, N1, N6, N4)
+        ZMK_UNICODE_PAIR(cs_u_ring,  N0, N1, N6, F,  N0, N1, N6, E )
+        ZMK_UNICODE_PAIR(cs_z_caron, N0, N1, N7, E,  N0, N1, N7, D)
+        // --- end Czech pairs ---
     };
 
     combos {
@@ -35,14 +60,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // This is a sample keymap intended to be replaced with your own
-
         layer_0 {
             bindings = <
 &kp Q           &kp L         &kp Y         &kp P        &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
 &hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
 &kp W           &kp J         &kp V         &kp D        &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
-                              &lt 1 ESCAPE  &lt 3 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
+                              &lt 1 ESCAPE    &lt 3 SPACE    &mt DELETE BACKSPACE  &lt 4 TAB  &lt 3 SPACE       &lt 2 ENTER
             >;
         };
 
@@ -70,6 +93,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
+            >;
+        };
+
+        // New: LANG layer (index 4). Tap your chosen key = normal key; Hold it = this layer.
+        lang {
+            bindings = <
+&cs_a_acute  &cs_e_acute  &cs_i_acute  &cs_o_acute  &cs_u_acute  &cs_y_acute
+&cs_c_caron  &cs_s_caron  &cs_z_caron  &cs_r_caron  &cs_n_caron  &cs_u_ring
+&cs_d_caron  &cs_t_caron  &cs_e_caron  &de_ae       &de_oe       &de_ue
+&trans       &trans       &trans       &de_sz       &trans       &trans
             >;
         };
     };
