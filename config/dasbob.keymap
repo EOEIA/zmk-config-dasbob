@@ -82,10 +82,10 @@
 
         nav {
             bindings = <
-&trans          &trans          &trans          &trans    &trans          &trans  &trans    &trans    &trans  &trans
-&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &kp CS_O  &kp CS_U_ACUTE  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
-&trans          &trans          &trans          &trans    &trans          &trans  &kp HOME  &kp END   &trans  &trans
-                                &trans          &trans    &trans          &trans  &trans    &trans
+&trans          &trans          &trans          &trans        &trans          &trans  &trans    &trans    &trans  &trans
+&kp CS_A_ACUTE  &kp CS_E_ACUTE  &kp CS_I_ACUTE  &kp CS_O      &kp CS_U_ACUTE  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
+&trans          &trans          &trans          &kp CS_ACUTE  &trans          &trans  &kp HOME  &kp END   &trans  &trans
+                                &trans          &trans        &trans          &trans  &trans    &trans
             >;
         };
     };
