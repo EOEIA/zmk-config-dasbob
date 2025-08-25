@@ -1,10 +1,10 @@
+#define HOST_OS 1              // Linux (IBus Ctrl+Shift+U … Space)
+
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
 #include "locale_cs.dtsi"
-
-#define HOST_OS 1              // Linux (IBus Ctrl+Shift+U … Space)
-
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
