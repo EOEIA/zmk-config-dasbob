@@ -32,8 +32,13 @@
         };
 
         caron {
-            bindings = <&kp CS_CARON>;
+            bindings = <&kp LS(CS_CARON)>;
             key-positions = <20 34>;
+        };
+
+        acute {
+            bindings = <&kp CS_ACUTE>;
+            key-positions = <0 34>;
         };
     };
 
@@ -92,7 +97,7 @@
 
         symbol {
             bindings = <
-&kp CS_QMARK          &kp CS_EXCL           &kp CS_CARET              &kp CS_PIPE         &trans          &kp CS_TILDE      &kp CS_DOLLAR     &kp CS_LESS_THAN  &kp CS_GREATER_THAN  &trans
+&kp CS_QMARK          &kp CS_EXCL           &kp CS_CARET              &kp CS_PIPE         &kp CS_EURO     &kp CS_TILDE      &kp CS_DOLLAR     &kp CS_LESS_THAN  &kp CS_GREATER_THAN  &kp GRAVE
 &kp CS_DOUBLE_QUOTES  &kp CS_LEFT_BRACKET   &kp CS_LEFT_PARENTHESIS   &kp CS_LEFT_BRACE   &kp CS_PERCENT  &kp CS_AT         &kp CS_SLASH      &kp CS_ASTERISK   &kp CS_HASH          &kp CS_EQUAL
 &kp CS_SINGLE_QUOTE   &kp CS_RIGHT_BRACKET  &kp CS_RIGHT_PARENTHESIS  &kp CS_RIGHT_BRACE  &trans          &kp CS_AMPERSAND  &kp CS_BACKSLASH  &kp CS_PLUS       &kp CS_MINUS         &trans
                                             &trans                    &trans              &trans          &trans            &trans            &trans
@@ -101,10 +106,10 @@
 
         nav {
             bindings = <
-&trans         &kp LS(CS_SZ)     &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
-&kp CS_UMLAUT  &kp LS(CS_CARON)  &kp CS_ACUTE   &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT
-&trans         &trans            &trans         &trans  &trans  &trans  &kp HOME  &kp END   &caps_word  &trans
-                                 &trans         &trans  &trans  &trans  &trans    &trans
+&trans         &kp LS(CS_SZ)  &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
+&kp CS_UMLAUT  &trans         &trans         &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT
+&trans         &trans         &trans         &trans  &trans  &trans  &kp HOME  &kp END   &caps_word  &trans
+                              &trans         &trans  &trans  &trans  &trans    &trans
             >;
         };
     };
