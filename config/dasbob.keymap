@@ -79,10 +79,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y        &kp P        &kp B                 &kp Z    &kp F                &kp O        &kp U         &kp CS_APOS
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S  &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N       &hm LCTRL E  &hm RSHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V        &kp D        &kp K                 &kp X    &kp H                &kp CS_DOT   &kp CS_COMMA  &mt CS_SEMI CS_MINUS
-                              &kp ESC      &lt 1 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 LC(BACKSPACE)  &lt 2 ENTER
+&kp Q           &kp L         &kp Y                 &kp P        &kp B                 &kp Z    &kp F           &kp O        &kp U         &kp CS_APOS
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S           &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm RSHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V                 &kp D        &kp K                 &kp X    &kp H           &kp CS_DOT   &kp CS_COMMA  &mt CS_SEMI CS_MINUS
+                              &mt LS(CS_CARON) ESC  &lt 1 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 CS_ACUTE  &lt 2 ENTER
             >;
         };
 
