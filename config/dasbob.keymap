@@ -32,43 +32,13 @@
         };
 
         caron {
-            bindings = <&kp LS(CS_CARON)>;
+            bindings = <&kp CS_CARON>;
             key-positions = <20 34>;
         };
 
         acute {
             bindings = <&kp CS_ACUTE>;
             key-positions = <0 34>;
-        };
-    };
-
-    macros {
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp CS_ACUTE>,
-                <&macro_tap>,
-                <&kp CS_O>,
-                <&macro_release>,
-                <&kp LEFT_SHIFT>;
-
-            label = "NEW_MACRO";
-        };
-
-        nshackem: UsCarkou {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp CS_ACUTE>,
-                <&macro_tap>,
-                <&kp CS_N>,
-                <&macro_release>,
-                <&kp CS_ACUTE>;
-
-            label = "USCARKOU";
         };
     };
 
@@ -82,7 +52,7 @@
 &kp Q           &kp L         &kp Y        &kp P        &kp B                 &kp Z    &kp F           &kp O                 &kp U         &kp CS_APOS
 &hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S  &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E           &hm RSHIFT I  &hm RIGHT_ALT A
 &kp W           &kp J         &kp V        &kp D        &kp K                 &kp X    &kp H           &kp CS_DOT            &kp CS_COMMA  &mt CS_SEMI CS_MINUS
-                              &lt 2 ENTER  &lt 1 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 CS_ACUTE  &mt ESC LS(CS_CARON)
+                              &lt 2 ENTER  &lt 1 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 CS_ACUTE  &mt ESC CS_CARON
             >;
         };
 
@@ -97,16 +67,16 @@
 
         symbol {
             bindings = <
-&kp CS_QMARK          &kp CS_EXCL           &kp LS(CS_CARET)          &kp CS_PIPE         &kp CS_EURO     &kp CS_TILDE      &kp CS_DOLLAR     &kp CS_LESS_THAN  &kp CS_GREATER_THAN  &kp GRAVE
+&kp CS_QMARK          &kp CS_EXCL           &kp CS_CARET              &kp CS_PIPE         &kp CS_EURO     &kp CS_TILDE      &kp CS_DOLLAR     &kp CS_LESS_THAN  &kp CS_GREATER_THAN  &kp CS_GRAVE
 &kp CS_DOUBLE_QUOTES  &kp CS_LEFT_BRACKET   &kp CS_LEFT_PARENTHESIS   &kp CS_LEFT_BRACE   &kp CS_PERCENT  &kp CS_AT         &kp CS_SLASH      &kp CS_ASTERISK   &kp CS_HASH          &kp CS_EQUAL
-&kp CS_SINGLE_QUOTE   &kp CS_RIGHT_BRACKET  &kp CS_RIGHT_PARENTHESIS  &kp CS_RIGHT_BRACE  &trans          &kp CS_AMPERSAND  &kp CS_BACKSLASH  &kp CS_PLUS       &kp CS_MINUS         &kp CS_DIVIDE
+&kp CS_SINGLE_QUOTE   &kp CS_RIGHT_BRACKET  &kp CS_RIGHT_PARENTHESIS  &kp CS_RIGHT_BRACE  &trans          &kp CS_AMPERSAND  &kp CS_BACKSLASH  &kp CS_PLUS       &kp CS_MINUS         &kp CS_UNDERSCORE
                                             &trans                    &trans              &trans          &trans            &trans            &trans
             >;
         };
 
         nav {
             bindings = <
-&trans         &kp LS(CS_SZ)  &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
+&trans         &kp CS_SZ      &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
 &kp CS_UMLAUT  &trans         &trans         &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT
 &trans         &trans         &trans         &trans  &trans  &trans  &kp HOME  &kp END   &caps_word  &trans
                               &trans         &trans  &trans  &trans  &trans    &trans
