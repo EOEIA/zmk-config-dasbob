@@ -21,6 +21,50 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        // Diacritic layer-taps: no require-prior-idle so the chord still
+        // works mid-word at full typing speed.
+        ltd: layer_tap_diacritic {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_DIACRITIC";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+        };
+    };
+
+    macros {
+        // Letters with no single keycode in cz(qwerty): dead key + letter.
+        o_acute: o_acute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CS_ACUTE &kp O>;
+            label = "O_ACUTE";
+        };
+
+        t_caron: t_caron {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CS_CARON &kp T>;
+            label = "T_CARON";
+        };
+
+        d_caron: d_caron {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CS_CARON &kp D>;
+            label = "D_CARON";
+        };
+
+        n_caron: n_caron {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp CS_CARON &kp N>;
+            label = "N_CARON";
+        };
     };
 
     combos {
@@ -30,29 +74,17 @@
             bindings = <&caps_word>;
             key-positions = <31 30>;
         };
-
-        caron {
-            bindings = <&kp CS_CARON>;
-            key-positions = <20 34>;
-        };
-
-        acute {
-            bindings = <&kp CS_ACUTE>;
-            key-positions = <0 34>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        // This is a sample keymap intended to be replaced with your own
-
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y        &kp P        &kp B                 &kp Z    &kp F           &kp O                 &kp U         &kp CS_APOS
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S  &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E           &hm RSHIFT I  &hm RIGHT_ALT A
-&kp W           &kp J         &kp V        &kp D        &kp K                 &kp X    &kp H           &kp CS_DOT            &kp CS_COMMA  &mt CS_SEMI CS_MINUS
-                              &lt 2 ENTER  &lt 1 SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 CS_ACUTE  &mt ESC CS_CARON
+&kp Q            &kp L          &kp Y        &kp P        &kp B                 &kp Z      &kp F            &kp O         &kp U          &kp CS_APOS
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S &hm LGUI T  &kp G                 &kp M      &hm LEFT_GUI N  &hm LCTRL E  &hm RSHIFT I  &hm RIGHT_ALT A
+&kp W            &kp J          &kp V        &kp D        &kp K                 &kp X      &kp H            &kp CS_DOT    &kp CS_COMMA   &mt CS_SEMI CS_MINUS
+                                &lt 2 ENTER  &lt 1 SPACE  &mt DELETE BACKSPACE  &lt 3 TAB  &ltd 4 CS_ACUTE  &ltd 5 CS_CARON
             >;
         };
 
@@ -76,10 +108,28 @@
 
         nav {
             bindings = <
-&trans         &kp CS_SZ      &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
+&kp ESC        &kp CS_SZ      &kp CS_U_RING  &trans  &trans  &trans  &trans    &trans    &trans      &trans
 &kp CS_UMLAUT  &trans         &trans         &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP      &kp RIGHT
 &trans         &trans         &trans         &trans  &trans  &trans  &kp HOME  &kp END   &caps_word  &trans
                               &trans         &trans  &trans  &trans  &trans    &trans
+            >;
+        };
+
+        acute {
+            bindings = <
+&trans  &trans  &kp CS_Y_ACUTE  &trans  &trans  &trans  &trans         &o_acute        &kp CS_U_ACUTE  &trans
+&trans  &trans  &trans          &trans  &trans  &trans  &trans         &kp CS_E_ACUTE  &kp CS_I_ACUTE  &kp CS_A_ACUTE
+&trans  &trans  &trans          &trans  &trans  &trans  &kp CS_U_RING  &trans          &trans          &trans
+                &trans          &trans  &trans  &trans  &trans         &trans
+            >;
+        };
+
+        caron {
+            bindings = <
+&trans          &trans          &trans          &trans    &trans  &kp CS_Z_CARON  &trans    &trans          &trans  &trans
+&kp CS_C_CARON  &kp CS_R_CARON  &kp CS_S_CARON  &t_caron  &trans  &trans          &n_caron  &kp CS_E_CARON  &trans  &trans
+&trans          &trans          &trans          &d_caron  &trans  &trans          &trans    &trans          &trans  &trans
+                                &trans          &trans    &trans  &trans          &trans    &trans
             >;
         };
     };
